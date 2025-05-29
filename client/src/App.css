@@ -130,3 +130,76 @@ h3 {
 .btn:focus, .delete-btn:focus {
   outline: 0;
 }
+
+/* Styles for EMICalculator Component */
+.emi-calculator-container {
+  background-color: #fff; /* Match other containers or choose a distinct one */
+  padding: 20px;
+  border-radius: 5px; /* Match other containers */
+  box-shadow: var(--box-shadow); /* Use existing shadow variable */
+  margin-top: 30px; /* Space from components above */
+}
+
+.emi-calculator-container h3 {
+  text-align: center; /* Center the EMI Calculator title */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bbb; /* Match other h3 styles */
+  padding-bottom: 10px; /* Match other h3 styles */
+}
+
+/* Ensure form controls within EMI calculator also use full width and have margins */
+.emi-calculator-container .form-control {
+  margin-bottom: 15px; /* Slightly more space if needed */
+}
+
+.emi-calculator-container .form-control label {
+  display: block; /* Ensure labels are above inputs */
+  margin-bottom: 5px;
+}
+
+.emi-calculator-container .form-control input[type="number"] {
+  width: 100%; /* Make input fields take full width */
+  padding: 10px; /* Match other input fields */
+  border: 1px solid #dedede; /* Match other input fields */
+  border-radius: 2px; /* Match other input fields */
+  box-sizing: border-box;
+}
+
+.emi-calculator-container .btn {
+  width: 100%; /* Make button take full width */
+  padding: 10px; /* Match other buttons */
+  margin-top: 10px; /* Space above the button */
+  /* background-color: #5cb85c; */ /* Example: Green color for calculate, or use existing btn style */
+}
+
+.emi-result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e9ecef; /* Light background for the result */
+  border-radius: 4px;
+  text-align: center;
+}
+
+.emi-result h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.emi-result p {
+  font-size: 1.5em; /* Larger font for the EMI amount */
+  font-weight: bold;
+  color: #007bff; /* A primary color for the result */
+  margin-bottom: 0;
+}
+
+.error-message { /* Already styled with inline style, but can add more here if needed */
+    text-align: center;
+    margin-top: 10px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}

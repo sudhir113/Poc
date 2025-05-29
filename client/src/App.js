@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Balance from './components/Balance';
 import TransactionList from './components/TransactionList';
 import AddTransactionForm from './components/AddTransactionForm';
+import EMICalculator from './components/EMICalculator'; // <-- New import
 import './App.css';
 
 function App() {
@@ -77,6 +78,8 @@ function App() {
         <Balance transactions={transactions} />
         <AddTransactionForm onAddTransaction={addTransaction} />
         <TransactionList transactions={transactions} onRemoveTransaction={deleteTransaction} />
+        <hr /> {/* Optional: a separator */}
+        <EMICalculator /> {/* <-- Add the new component */}
       </div>
     </div>
   );

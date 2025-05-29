@@ -1,6 +1,6 @@
 # Finance Dashboard Application
 
-This project is a simple Finance Dashboard application built with the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to track their income and expenses.
+This project is a simple Finance Dashboard application built with the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to track their income and expenses, **and also includes an EMI (Equated Monthly Installment) calculator.**
 
 ## Project Structure
 
@@ -15,8 +15,24 @@ This project is a simple Finance Dashboard application built with the MERN stack
   - `/client/public`: Public assets and `index.html`.
   - `/client/src`: React components, App.js, index.js, CSS files.
     - `/client/src/components`: Reusable React components and their test files.
+        - `Header.js`, `Header.test.js`
+        - `Balance.js`, `Balance.test.js`
+        - `TransactionList.js`
+        - `TransactionItem.js`
+        - `AddTransactionForm.js`, `AddTransactionForm.test.js`
+        - `EMICalculator.js`, `EMICalculator.test.js`
+    - `/client/src/utils`: Utility functions and their tests.
+        - `emiCalculations.js`, `emiCalculations.test.js`
   - `package.json`: Frontend dependencies and scripts.
 - `README.md`: This file.
+
+## Features
+
+- Transaction tracking (Create, Read, Delete operations).
+- Balance calculation.
+- **EMI Calculator:**
+  - Allows users to calculate Equated Monthly Installments for a loan based on principal amount, annual interest rate, and loan tenure in years.
+  - Provides instant calculation on the frontend.
 
 ## Prerequisites
 
@@ -58,6 +74,7 @@ Before you begin, ensure you have the following installed:
       npm start
       ```
     This should open the application in your default web browser. The React app is configured to proxy API requests to the backend server on port 3001.
+    The EMI Calculator will be visible on the main page below the transaction history.
 
 ## Running Tests (Conceptual)
 
@@ -85,5 +102,6 @@ Test files have been created as stubs. To run them, you'll first need to ensure 
       ```bash
       npm test
       ```
+    This will run tests from files like `Header.test.js`, `Balance.test.js`, `EMICalculator.test.js`, and `utils/emiCalculations.test.js`.
 
 **Note:** The test stubs provided will likely need further refinement and a running backend/database for full integration testing.
